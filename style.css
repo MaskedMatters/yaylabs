@@ -1,0 +1,139 @@
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	font-family: "Inter", system-ui, sans-serif;
+	color: #ffffff;
+}
+
+/* Seamless animated background */
+body {
+	background: linear-gradient(
+		120deg,
+		#0f172a,
+		#1e293b,
+		#0f766e,
+		#1e293b,
+		#0f172a
+	);
+	background-size: 600% 600%;
+	animation: backgroundFlow 40s linear infinite;
+}
+
+@keyframes backgroundFlow {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+
+/* Header */
+header {
+	text-align: center;
+	padding: 4rem 1.5rem 3rem;
+}
+
+header h1 {
+	font-size: 3.5rem;
+	font-weight: 800;
+	letter-spacing: -0.04em;
+}
+
+header p {
+	max-width: 700px;
+	margin: 1rem auto 0;
+	font-size: 1.1rem;
+	opacity: 0.85;
+	line-height: 1.6;
+}
+
+/* Grid */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
+	padding: 2.5rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Cards */
+.card {
+	position: relative;
+	padding: 2.5rem;
+	border-radius: 20px;
+	text-decoration: none;
+	color: inherit;
+	min-height: 220px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	background: rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-8px) scale(1.02);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.card h2 {
+	font-size: 1.6rem;
+	font-weight: 700;
+	margin-bottom: 0.75rem;
+}
+
+.card p {
+	font-size: 1rem;
+	line-height: 1.5;
+	opacity: 0.9;
+}
+
+/* Badges */
+.badge {
+	align-self: flex-start;
+	font-size: 0.75rem;
+	font-weight: 600;
+	padding: 0.35rem 0.7rem;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.2);
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+/* Individual personalities */
+.card.alarms {
+	background: linear-gradient(135deg, #fb7185, #f43f5e);
+}
+
+.card.discord {
+	background: linear-gradient(135deg, #5865f2, #818cf8);
+}
+
+.card.quotes {
+	background: linear-gradient(135deg, #22c55e, #4ade80);
+}
+
+.card.getmeout {
+	background: linear-gradient(135deg, #f59e0b, #facc15);
+}
+
+/* Footer */
+footer {
+	text-align: center;
+	padding: 3rem 1rem 2.5rem;
+	font-size: 0.9rem;
+	opacity: 0.75;
+}
